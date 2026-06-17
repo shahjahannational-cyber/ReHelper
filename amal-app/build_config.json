@@ -1,0 +1,58 @@
+{
+  "app_name": "Amal",
+  "app_version": "1.0.0",
+  "min_sdk": 21,
+  "target_sdk": 34,
+  "compile_sdk": 34,
+  "gradle_version": "7.0",
+  "kotlin_version": "1.8.0",
+  "namespace": "com.amal.productivity",
+  "application_id": "com.amal.app",
+  "signing": {
+    "store_file": "keystore.jks",
+    "store_password": "required_at_build_time",
+    "key_alias": "amal",
+    "key_password": "required_at_build_time"
+  },
+  "build_types": {
+    "debug": {
+      "debuggable": true,
+      "minify": false
+    },
+    "release": {
+      "debuggable": false,
+      "minify": true,
+      "shrink_resources": true,
+      "proguard_rules": "proguard-rules.pro"
+    }
+  },
+  "features": [
+    "android.hardware.camera",
+    "android.software.app_widgets"
+  ],
+  "permissions": [
+    "android.permission.INTERNET",
+    "android.permission.ACCESS_NETWORK_STATE",
+    "android.permission.ACCESS_FINE_LOCATION",
+    "android.permission.ACCESS_COARSE_LOCATION",
+    "android.permission.CAMERA",
+    "android.permission.READ_EXTERNAL_STORAGE",
+    "android.permission.WRITE_EXTERNAL_STORAGE",
+    "android.permission.SCHEDULE_EXACT_ALARM",
+    "android.permission.VIBRATE",
+    "android.permission.REQUEST_INSTALL_PACKAGES"
+  ],
+  "split_apk": {
+    "enabled": true,
+    "architectures": [
+      "arm64-v8a",
+      "armeabi-v7a",
+      "x86_64"
+    ]
+  },
+  "play_store": {
+    "track": "internal",
+    "release_status": "draft",
+    "country_targeting": "not_specified"
+  }
+}
